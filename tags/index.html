@@ -3,15 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Aspirant, Love, Passion</title>
+  <title>tags | Aspirant, Love, Passion</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="A personal blog that records life, study and work">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Aspirant, Love, Passion">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:title" content="tags">
+<meta property="og:url" content="http://example.com/tags/index.html">
 <meta property="og:site_name" content="Aspirant, Love, Passion">
 <meta property="og:description" content="A personal blog that records life, study and work">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-07-13T05:23:41.000Z">
+<meta property="article:modified_time" content="2022-07-13T05:24:11.070Z">
 <meta property="article:author" content="Jerrold">
 <meta name="twitter:card" content="summary">
   
@@ -31,9 +33,6 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
-    
-    
-  
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   
@@ -45,7 +44,7 @@
           rootUrl: '/',
           fancybox: true,
           animate: true,
-          isHome: true,
+          isHome: false,
           isPost: false,
           isArchive: false,
           isTag: false,
@@ -334,13 +333,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-FIRST-BLOG" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="tags-" class="article article-type-tags" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2022/07/13/FIRST-BLOG/" class="article-date">
-      <time datetime="2022-07-12T16:00:00.000Z" itemprop="datePublished">2022-07-13</time>
+      <a href="/tags/index.html" class="article-date">
+      <time datetime="2022-07-13T05:23:41.000Z" itemprop="datePublished">2022-07-13</time>
 </a>
     </div>
   
@@ -352,63 +349,227 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/07/13/FIRST-BLOG/">FIRST ESSAY</a>
+    <h1 class="article-title" itemprop="name">
+      tags
     </h1>
   
 
       </header>
       
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
     
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><strong>The Reason Why I Create</strong></p>
-<p><em>I will be very envious when i see people have their own pages.</em></p>
-<p><em>I would also appreciate those people are excellently competent.</em></p>
-<p><em>So, i try to do it myself and use it to record my life, study and work.</em></p>
-<p><em>This is an interesting and meaningful work for me and i like it.</em></p>
-<p><strong>What shall i do next?</strong></p>
-<p><em>Read a lot and post about it</em></p>
-<p><em>Learn to code and pass on the experience</em></p>
-<p><em>Say something about mathematics comprehension</em></p>
-<p><strong>Expectation</strong></p>
-<p><em>I want to know you and please contact me if you are obsessed with code</em></p>
-<p><em>Learn and grow by sharing</em></p>
-<p>The world is better</p>
-<p><strong>Thanks for reading!!</strong></p>
+              <style>
+    .article-meta {
+        display: none;
+    }
+    #container .article .article-title {
+        padding-right: 0;
+    }
+    .article-header {
+        padding: 0;
+        padding-top: 26px;
+        border-left: none;
+        text-align: center;
+    }
+    .article-header:hover {
+        border-left: none;
+    }
+    .article-title {
+        font-size: 1.6em
+    }
+    .article-meta {
+        display: none;
+    }
+    .article-entry hr {
+        margin: 0;
+    }
+    #container .article-info-post.article-info {
+      display: none;
+      }
+    #container .article .article-title {
+    padding: 0;
+    }
+</style>
 
-      
-      
-    </div>
+
+    <!-- Tag Cloud Page -->
+    <hr>
+    <br>
     
-    <div class="article-info article-info-index">
-      
-      
 
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/records/" rel="tag">records</a></li></ul>
+    <p class="count"></p>
+
+    <div class="tags">
+        <a href="/tags/records/" style="font-size: 16px; color: #808080">records</a>
     </div>
+    <style>
+        .category-list li{
+            display: inline-block;
+            margin: 0 1em .5em 0;
+            padding: 4px;
+            border: 1px solid lightgray;
+            font-size: 1.2em;
+        }
+        .category-list a {
+            color: gray;
+        }
+        .category-list-item:hover a {
+            color: gray;
+            text-decoration: none;
+        }
+        .category-list-count {
+            margin-left: 2px;
+            font-size: .9em;
+        }
+        .article-entry ul li:before{
+            display: none;
+        }
+        .article-inner  {
+            text-align: center;
+        }
+        .tags {
+            max-width: 40em;
+            margin: 2em auto;
+            margin-top: 0em;
+        }
+        .tags a {
+            margin-right: 1em;
+            line-height: 65px;
+            border-bottom: 1px solid gray;
+            white-space: nowrap;
+        }
+        .tags a:hover {
+            border-bottom: 2px solid black;
+            text-decoration: none;
+            font-style: italic;
+        }
+        #count > span {
+            margin: auto .2em;
+            font-weight: bold;
+        }
+    </style>
 
+    <!-- Count tags and categories -->
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <p id="count">
+            已有<span><script>document.write($(".category-list-item").length)</script></span>个分类，
+            共计<span><script>document.write($(".tags > a").length)</script></span>个标签。
+    </p>
+    <script>
+        $('#count').appendTo('.count');
+    </script>
+
+
+          
+        
       
-      <div class="clearfix"></div>
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
     </div>
     
   </div>
+  
+    
+
+
   
 </article>
 
 
 
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'swing'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+    
 
 
 
 
 
-
-  
-  
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
