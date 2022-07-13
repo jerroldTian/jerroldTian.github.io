@@ -13,9 +13,9 @@
 <meta property="og:description" content="The Reason Why I Create I will be very envious when i see people have their own pages. I would also appreciate those people are excellently competent. So, i try to do it myself and use it to record my">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-12T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-07-13T07:03:12.663Z">
+<meta property="article:modified_time" content="2022-07-13T10:46:17.088Z">
 <meta property="article:author" content="Jerrold">
-<meta property="article:tag" content="records">
+<meta property="article:tag" content="introduction">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Aspirant, Love, Passion" type="application/atom+xml">
@@ -67,6 +67,56 @@
         </hgroup>
         
         
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
         
         
         <div id="switch-area" class="switch-area">
@@ -237,7 +287,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/records/" rel="tag">records</a></li></ul>
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/introduction/" rel="tag">introduction</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -319,7 +369,7 @@
         <p><span>本文标题:</span><a href="/2022/07/13/FIRST-BLOG/">FIRST ESSAY</a></p>
         <p><span>文章作者:</span><a href="/" title="访问  的个人博客"></a></p>
         <p><span>发布时间:</span>2022年07月13日 - 00时00分</p>
-        <p><span>最后更新:</span>2022年07月13日 - 15时03分</p>
+        <p><span>最后更新:</span>2022年07月13日 - 18时46分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2022/07/13/FIRST-BLOG/" title="FIRST ESSAY">http://example.com/2022/07/13/FIRST-BLOG/</a>
             <span class="copy-path" data-clipboard-text="原文: http://example.com/2022/07/13/FIRST-BLOG/　　作者: " title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -430,9 +480,6 @@
             <div class="footer-left">
                 &copy; 2022 Jerrold
             </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="http://bestwing.me" target="_blank">Sw'blog</a> by Swing
-            </div>
         </div>
         
             <div class="visit">
@@ -521,6 +568,23 @@
     });
 </script>
 
+
+    <script type="text/javascript">
+      window.onload = function(){
+        document.getElementById("search").onclick = function(){
+            console.log("search")
+            search();
+        }
+      }
+      function search(){
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+        _st('install','A1Pz-LKMXbrzcFg2FWi6','2.0.0');
+      }
+    </script>
 
   </div>
 </body>
